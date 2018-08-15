@@ -4,7 +4,7 @@ provider "aws" {
   region = "${var.vpc-region}"
 }
 
-
+/*
 terraform {
  backend "s3" {
    bucket = "rtccpro1"
@@ -12,7 +12,7 @@ terraform {
    region = "${var.vpc-region}"
  }
 }
-
+*/
 
 #resource
 
