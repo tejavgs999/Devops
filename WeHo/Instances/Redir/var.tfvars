@@ -1,0 +1,11 @@
+amiid = "ami-e251209a"
+subnetid = "subnet-a623aaed"
+count1 ="1"
+ec2_type ="t2.micro"
+keypair ="ra-key"
+sec_id =["sg-131c5562"]
+devicename = "/dev/sdm"
+volumetype = "gp2"
+vsize = "100"
+io = "300"
+instancename = "RTCC-WeHo-Redir"
