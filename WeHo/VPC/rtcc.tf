@@ -269,3 +269,32 @@ resource "aws_security_group" "WeHo-Failover-Fed-SG" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+#Variables
+
+#VPC
+variable "vpc-region"{}
+variable "vpc-cidr"{}
+variable "vpc-name"{}
+
+
+#subnet
+
+#rtcc-public-1
+variable "subnet-cidr-pub"{}
+variable "az-pub"{}
+
+#rtcc-private-1
+variable "subnet-cidr-pvt"{}
+variable "az-pvt"{}
+
+
+#VPN
+variable "vpn-CGW-name"{}
+variable "vpn-VPGW-name"{}
+variable "vpn-name"{}
+
+
+#vpc peering
+variable "peering-owner-id"{}
+variable "peering-vpc-id"{}
