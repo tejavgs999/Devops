@@ -8,7 +8,7 @@ provider "aws" {
 terraform {
  backend "s3" {
    bucket = "rtccpro1"
-   key    = "RTCC-WeHo/VPC/terraform.tfstate"
+   key    = "RTCC-WeHo/VPC/"
    region = "${var.vpc-region}"
  }
 }
