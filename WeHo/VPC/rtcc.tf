@@ -88,7 +88,7 @@ resource "aws_vpn_connection" "RTCC-WeHo-Palo_Alto_Firewall-VPN"{
     Name = "${var.vpn-name}"
   }
 }
-*/
+
 
 
 #/*  -----> delete
