@@ -23,4 +23,4 @@ vpn-name = "RTCC-WeHo-Palo_Alto_Firewall-VPN"
 
 #vpc peering
 peering-owner-id = "290572789794"
-peering-vpc-id = "290572789794" #RTCC DMZ VPC ID
+peering-vpc-id = "vpc-0e1db469" #RTCC DMZ VPC ID
