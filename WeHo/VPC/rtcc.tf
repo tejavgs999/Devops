@@ -1,6 +1,6 @@
 #provider
 provider "aws" {
-  shared_credentials_file = "~/.aws/credentials"
+  shared_credentials_file = "/home/ubuntu/.aws/"
   region = "${var.vpc-region}"
 }
 
