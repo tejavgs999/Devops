@@ -5,15 +5,14 @@ provider "aws" {
   region = "${var.vpc-region}"
 }
 
-/*
 terraform {
  backend "s3" {
-   bucket = "rtccpro1"
-   key    = "RTCC-WeHo/VPC/"
-   region = "${var.vpc-region}"
+   bucket = "terr-test1"
+   key    = "test/terraform.tfstate"
+   shared_credentials_file = "/home/ubuntu/.aws/credentials"
+   region = "ap-southeast-1"
  }
 }
-*/
 
 #resource
 
