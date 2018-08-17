@@ -96,8 +96,9 @@ resource "aws_vpn_connection" "RTCC-WeHo-Palo_Alto_Firewall-VPN"{
 
 resource "aws_vpc_peering_connection" "rtcc_vpc_peering"{
   peer_owner_id = "${var.peering-owner-id}" #account number
-  peer_vpc_id = "${var.peering-vpc-id}"
-  vpc_id = "${aws_vpc.rtcc-weho.id}"
+  peer_vpc_id = "${var.peering-vpc-id}" #The ID of the VPC with which you are creating the VPC Peering Connection
+  vpc_id = "${aws_vpc.rtcc-weho.id}" #The ID of the requester VPC
+  peer_region = us-west-1 #The region of the accepter VPC of the [VPC Peering Connection]
   auto_accept = true
 
   accepter {
