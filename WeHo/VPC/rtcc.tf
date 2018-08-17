@@ -99,7 +99,7 @@ resource "aws_vpc_peering_connection" "rtcc_vpc_peering"{
   peer_vpc_id = "${var.peering-vpc-id}" #The ID of the VPC with which you are creating the VPC Peering Connection
   vpc_id = "${aws_vpc.rtcc-weho.id}" #The ID of the requester VPC
   peer_region = "us-west-1" #The region of the accepter VPC of the [VPC Peering Connection]
-  auto_accept = true
+  auto_accept = false
 
   accepter {
     allow_remote_vpc_dns_resolution = true
