@@ -1,25 +1,34 @@
+#provider
 provider "aws" {
- region                     = "ap-southeast-2"
- shared_credentials_file    = "~/.aws/credentials"
- profile                    = "rtcc-ravi"
+  shared_credentials_file = "/home/ubuntu/.aws/credentials"
+  profile = "default"
+  region = "${var.vpc-region}"
 }
-
 
 terraform {
  backend "s3" {
-   bucket = "rtccpro1"
-   key    = "WeHo/Instances/Master/terraform.tfstate"
-   region = "ap-southeast-2"
+   bucket = "terr-test1"
+   key    = "instance/master/terraform.tfstate"
+   shared_credentials_file = "/home/ubuntu/.aws/credentials"
+   region = "ap-southeast-1"
  }
 }
 
+resource "aws_ebs_volume" "weho-master-Volume2" {
+  availability_zone = "ap-southeast-1a"
+  size              = 100
+  encrypted         = true
+  tags {
+        Name = "weho-master-Volume2"
+    }
+}
 
 
-resource "aws_instance" "master" {
+resource "aws_instance" "weho-master" {
 
  count               =  "${var.count1}"
  ami                 =  "${var.amiid}"
- availability_zone   = "ap-southeast-2a"
+ availability_zone   = "ap-southeast-1a"
  instance_type       = "${var.ec2_type}"
  key_name            = "${var.keypair}"
  vpc_security_group_ids   = "${var.sec_id}"
@@ -33,6 +42,12 @@ resource "aws_instance" "master" {
   tags {
     Name = "${var.instancename}"
   }
+}
+
+resource "aws_volume_attachment" "ebs_weho-master" {
+  device_name = "/dev/sda2"
+  volume_id   = "${aws_ebs_volume.weho-master-Volume2.id}"
+  instance_id = "${aws_instance.weho-master.id}"
 }
 
 variable "io" {

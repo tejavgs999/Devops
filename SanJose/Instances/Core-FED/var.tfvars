@@ -1,0 +1,11 @@
+amiid = "ami-e251209a"
+subnetid = "subnet-092ca542"
+count1 ="1"
+ec2_type ="t2.micro"
+keypair ="ra-key"
+sec_id =["sg-08195079"]
+devicename = "/dev/sdm"
+volumetype = "gp2"
+vsize = "100"
+io = "300"
+instancename = "Sanjose-Core-Fed"

@@ -1,9 +1,10 @@
-amiid = "ami-e251209a"
-subnetid = "subnet-092ca542"
+vpc-region = "ap-southeast-1"
+amiid = "ami-01da99628f381e50a"
+subnetid = "subnet-01bccab575ab7f754"
 count1 ="1"
 ec2_type ="t2.micro"
-keypair ="ra-key"
-sec_id =["sg-be1a53cf"]
+keypair ="rtcc-key.pem"
+sec_id =["sg-07bb166520c63dc71"]
 devicename = "/dev/sdm"
 volumetype = "gp2"
 vsize = "100"

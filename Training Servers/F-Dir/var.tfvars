@@ -1,0 +1,11 @@
+amiid = "ami-02c72061"
+subnetid = "subnet-0fd04454"
+count1 ="1"
+ec2_type ="t2.xlarge"
+keypair ="rtcc-key"
+sec_id =["sg-d5c7beac"]
+devicename = "/dev/sda1"
+volumetype = "gp2"
+vsize = "100"
+io = "300"
+instancename = "RTCC-Training-FDir"

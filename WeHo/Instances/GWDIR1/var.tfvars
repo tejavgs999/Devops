@@ -1,11 +1,12 @@
-amiid = "ami-e251209a"
-subnetid = "subnet-a623aaed"
+vpc-region = "ap-southeast-1"
+amiid = "ami-01da99628f381e50a"
+subnetid = "subnet-01bccab575ab7f754"
 count1 ="1"
 ec2_type ="t2.micro"
-keypair ="ra-key"
-sec_id =["sg-c91c55b8"]
+keypair ="rtcc-key.pem"
+sec_id =["sg-0c3a47b5f8dbd7be7"]
 devicename = "/dev/sdm"
 volumetype = "gp2"
 vsize = "100"
 io = "300"
-instancename = "RTCC-WeHo-GWDIR1"
+instancename = "RTCC-WeHo-GWDir"
