@@ -2,7 +2,7 @@
 provider "aws" {
   shared_credentials_file = "/home/ubuntu/.aws/credentials"
   profile = "default"
-  region = "${var.vpc-region}"
+  region = "ap-southease-1" #"${var.vpc-region}"
 }
 
 terraform {
