@@ -50,6 +50,9 @@ resource "aws_volume_attachment" "ebs_weho-master" {
   instance_id = "${aws_instance.weho-master.id}"
 }
 
+variable "vpc-region" {
+  default = "enter the value for vpc-region"
+}
 variable "io" {
   default = "enter the value for iops"
 }

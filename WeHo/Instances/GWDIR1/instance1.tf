@@ -50,6 +50,10 @@ resource "aws_volume_attachment" "ebs_weho-GWDir" {
   instance_id = "${aws_instance.weho-GWDir.id}"
 }
 
+
+variable "vpc-region" {
+  default = "enter the value for vpc-region"
+}
 variable "io" {
   default = "enter the value for iops"
 }
